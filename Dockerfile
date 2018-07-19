@@ -2,7 +2,7 @@ FROM alpine:3.8
 MAINTAINER ykuoka@gmail.com
 
 # groff and less are required by awscli: https://github.com/aws/aws-cli/issues/1957
-RUN apk --no-cache --update add bash curl less groff jq python py-pip && \
+RUN apk --no-cache --update add bash curl less groff jq python py-pip zip && \
   pip install --no-cache-dir --upgrade pip && \
   # See https://github.com/aws/aws-cli/releases for latest releases of awscli
   # See https://github.com/s3tools/s3cmd/releases for latest releases of s3cmd
